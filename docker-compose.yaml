@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+    #node:
+    #    build: .
+    #    ports:
+    #        - "3000:3000"
+    #    depends_on: 
+    #        - pgsql
+    pgsql:        
+        image: "postgres:12"
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./pg/db_data:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_DB=developers
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_USER=postgres
+        #networks:
+        #    - sail 
+              
+#networks:
+#    sail:
+#        driver: bridge
+#volumes:
+#    sailpostgresql:
+#        driver: local
+                             
