@@ -12,7 +12,7 @@
 > API significa *Application Programming Interface* (Interface de Programação de Aplicativo) uma interface, ou método/forma, para dois softwares se comunicarem. Para outros sites e ferramentas consumirem os dados uns dos outros e estenderem seus serviços. E JSON porque é o formato que é retornado
 
 ## TESTES UNITARIOS
-> São testes automatizados escritos e executados para garantir que uma seção de um aplicativo (conhecida como "unidade") que atenda ao seu design e se comporte conforme o esperado. Evitando assim erros em produção da aplicação
+in development...
 
 ## DESCRIÇÃO
 in development...
