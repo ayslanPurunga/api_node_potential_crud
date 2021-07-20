@@ -45,6 +45,7 @@ class DevController {
             validSex(sex, 'Selecione o sexo!')
             validAge(age, 'Idade inválida!')
             validBirthDate(birthdate, age, 'Data de nascimento inválida, não é compátivel com a idade informada!')
+            validHobby(hobby, "Informe um hobby!")
             
 
             const developer = await Developer.create({ name, sex, age, birthdate, hobby })
@@ -57,7 +58,12 @@ class DevController {
 
     async update(req, res) {
         const { id } = req.params
-        const { name , sex, age, birthdate, hobby } = req.body
+        
+        let { name , sex, age, birthdate, hobby } = req.body
+
+        if(Object.keys(req.body ?? {}).length === 0 || req.body === undefined) {
+            return res.status(400).json({ message: 'Não foi informado nenhum dado para alterar!'})
+        }
 
         const developerId = await Developer.findOne({
             where: {
@@ -65,15 +71,25 @@ class DevController {
             }
         })
 
+        console.log(developerId);
+
         if(!developerId || developerId.length == 0) {
             return res.status(400).json({ message: 'Desenvolvedor não encontrado!'})
         }
 
         try {
-            validName(name, 'Nome inválido, digite no minimo 3 letras!')
+            /*validName(name, 'Nome inválido, digite no minimo 3 letras!')
             validSex(sex, 'Selecione um sexo!')
             validAge(age, 'Idade inválida')
-            validBirthDate(birthdate, age, 'Data de nascimento inválida, não é compátivel com a idade informada!')
+            validBirthDate(birthdate, age, 'Data de nascimento inválida, não é compátivel com a idade informada!')*/
+
+            name = name ? (() => {validName(name); return name})(): developerId.name;
+            sex = sex ? (() => {validSex(sex); return sex})(): developerId.sex;
+            age = age ? (() => {validAge(age); return age})(): developerId.age;
+            birthdate = birthdate ? (() => {validBirthDate(birthdate, age); return birthdate})(): developerId.birthdate;
+            hobby = hobby ? (() => {validHobby(hobby); return hobby})(): developerId.hobby;
+
+            console.log(name, sex, age, birthdate,hobby)
 
             const developer = await Developer.update({ name, sex, age, birthdate, hobby }, {
                 where: {

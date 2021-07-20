@@ -6,7 +6,7 @@ require("dotenv").config({
     username: 'postgres',//'postgres', //
     password: 'postgres',//'123456', //  
     host: '127.0.0.1',//'127.0.0.1', //
-    database: 'developers',//'development',//
+    database: 'developers',//'developers',//
     dialect: 'postgres',// "postgres",  || "sqlite",
     storage: "./__tests__/database.sqlite",
     operatorsAliases: 0,

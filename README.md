@@ -2,7 +2,7 @@
 
 # potential_crud_dev
 
-* Potencial para um CRUD
+* Potencial para um CRUD de Devs
 
 
 ## Objetivo:
@@ -21,6 +21,16 @@ in development...
 
 ```
     docker-compose up -d 
+```
+
+## Para acessar o container do postgres e listar as tabelas para validar
+
+```
+    docker container exec -it api_node_potential_crud_pgsql_1 bash
+    
+    psql -U postgres -d developers
+
+    \dt
 ```
 
 - [Linkedin](https://www.linkedin.com/in/ayslan-fernandes-da-silva-5aa617171/) 

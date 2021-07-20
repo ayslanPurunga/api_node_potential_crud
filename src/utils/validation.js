@@ -31,7 +31,13 @@ function validName(value, msg) {
 }
 
 function validSex(value, msg){
-    existsOrError(value, msg)
+    
+    const sex = value.chartAt(0).toUpperCase() ?? "";
+    const sexAllowed = ['M', 'F', 'O'];
+
+    if(!sexAllowed.includes(sex)){
+        throw "O sexo informado está válido, informe 'Masculino, Feminino ou Outros'";
+    }
 }
 
 function validAge(value, msg) {
@@ -43,9 +49,9 @@ function validAge(value, msg) {
 function validBirthDate(value, age, msg) {
     existsOrError(value, 'Por favor, digite uma data de nascimento válida e compátivel a idade...')
 
-    const dataNascimento = value.split('-')
+    const birthdate = value.split('-')
     
-    if(caculatorAge(dataNascimento[0], dataNascimento[1], dataNascimento[2]) != idade) throw msg
+    if(ageCalculator(birthdate[0], birthdate[1], birthdate[2]) != age) throw msg
     
 }
 
