@@ -78,18 +78,14 @@ class DevController {
         }
 
         try {
-            /*validName(name, 'Nome inválido, digite no minimo 3 letras!')
-            validSex(sex, 'Selecione um sexo!')
-            validAge(age, 'Idade inválida')
-            validBirthDate(birthdate, age, 'Data de nascimento inválida, não é compátivel com a idade informada!')*/
-
+            
             name = name ? (() => {validName(name); return name})(): developerId.name;
             sex = sex ? (() => {validSex(sex); return sex})(): developerId.sex;
             age = age ? (() => {validAge(age); return age})(): developerId.age;
             birthdate = birthdate ? (() => {validBirthDate(birthdate, age); return birthdate})(): developerId.birthdate;
             hobby = hobby ? (() => {validHobby(hobby); return hobby})(): developerId.hobby;
 
-            console.log(name, sex, age, birthdate,hobby)
+            //console.log(name, sex, age, birthdate,hobby)
 
             const developer = await Developer.update({ name, sex, age, birthdate, hobby }, {
                 where: {

@@ -3,11 +3,11 @@ require("dotenv").config({
   });
   
   module.exports = {
-    username: 'postgres',//'postgres', //
+    username: process.env.DB_USER,//'postgres', //
     password: 'postgres',//'123456', //  
     host: '127.0.0.1',//'127.0.0.1', //
-    database: 'developers',//'developers',//
-    dialect: 'postgres',// "postgres",  || "sqlite",
+    database: process.env.DB_NAME,//'developers',//
+    dialect: process.env.DB_DIALECT,// "postgres",  || "sqlite",
     storage: "./__tests__/database.sqlite",
     operatorsAliases: 0,
     logging: false,
