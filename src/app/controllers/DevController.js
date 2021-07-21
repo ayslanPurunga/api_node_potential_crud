@@ -40,6 +40,8 @@ class DevController {
     async description(req, res) {
         const { name, sex, age, birthdate, hobby } = req.body
 
+        console.log(req.body)
+
         try {
             validName(name, 'Nome inválido, digite no minimo 3 letras!')
             validSex(sex, 'Selecione o sexo!')
@@ -52,6 +54,7 @@ class DevController {
 
             return res.status(201).json({ developer })
         } catch (msg) {
+            console.log(msg)
             return res.status(400).json({ message: msg })
         }
     }
@@ -71,7 +74,6 @@ class DevController {
             }
         })
 
-        console.log(developerId);
 
         if(!developerId || developerId.length == 0) {
             return res.status(400).json({ message: 'Desenvolvedor não encontrado!'})

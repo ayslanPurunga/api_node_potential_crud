@@ -1,3 +1,5 @@
+const e = require("cors")
+
 function existsOrError(value, msg) {
     if(!value) throw msg
     if(Array.isArray(value) && value.length === 0) throw msg
@@ -26,7 +28,9 @@ function ageCalculator(year, month, day) {
 
 function validName(value, msg) {
     existsOrError(value, 'Por favor, digite um nome válido...')
-
+   
+    console.log(msg)
+    
     if(value.length < 3) throw msg
 }
 

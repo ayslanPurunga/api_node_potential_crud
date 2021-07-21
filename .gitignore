@@ -1,1 +1,10 @@
+#dependencies
 node_modules
+
+#dotenvs
+.env
+env_file
+env_test_file
+
+#tests
+__tests__

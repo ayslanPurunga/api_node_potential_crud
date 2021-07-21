@@ -7,7 +7,6 @@ module.exports = (sequelize, DataTypes) => {
         hobby: DataTypes.STRING,
     })
 
-    console.log('Olá Mundo!')
 
     return Developer;
 }
