@@ -36,11 +36,11 @@ function validName(value, msg) {
 
 function validSex(value, msg){
     
-    const sex = value.chartAt(0).toUpperCase() ?? "";
+    const sex = value.substr(0, 1).toUpperCase() ?? "";
     const sexAllowed = ['M', 'F', 'O'];
 
     if(!sexAllowed.includes(sex)){
-        throw "O sexo informado está válido, informe 'Masculino, Feminino ou Outros'";
+        throw "O sexo informado está inválido, informe 'Masculino, Feminino ou Outros'";
     }
 }
 

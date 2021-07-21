@@ -37,10 +37,8 @@ class DevController {
         return res.status(200).json({ developer })
     }
 
-    async description(req, res) {
-        const { name, sex, age, birthdate, hobby } = req.body
-
-        console.log(req.body)
+    async create(req, res) {
+        let { name, sex, age, birthdate, hobby } = req.body
 
         try {
             validName(name, 'Nome inválido, digite no minimo 3 letras!')
@@ -49,12 +47,12 @@ class DevController {
             validBirthDate(birthdate, age, 'Data de nascimento inválida, não é compátivel com a idade informada!')
             validHobby(hobby, "Informe um hobby!")
             
+            sex = sex.substr(0, 1);
 
             const developer = await Developer.create({ name, sex, age, birthdate, hobby })
 
             return res.status(201).json({ developer })
         } catch (msg) {
-            console.log(msg)
             return res.status(400).json({ message: msg })
         }
     }

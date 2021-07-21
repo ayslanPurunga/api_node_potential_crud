@@ -8,3 +8,6 @@ env_test_file
 
 #tests
 __tests__
+
+#db
+pg

@@ -4,7 +4,7 @@ const DeveloperController = require("./app/controllers/DevController")
 
 routes.get('/developers', DeveloperController.index)
 routes.get('/developers/:id', DeveloperController.show)
-routes.post('/developers', DeveloperController.description)
+routes.post('/developers', DeveloperController.create)
 routes.put('/developers/:id', DeveloperController.update)
 routes.delete('/developers/:id', DeveloperController.destroy)
 
