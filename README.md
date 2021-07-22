@@ -24,17 +24,13 @@
 
 ## Documetação da API:
 
-```
+
 - [Documentation](https://documenter.getpostman.com/view/11729513/TzsYM93K)
-```
 
 ## TESTES UNITARIOS
 
 in development...
 
-## DESCRIÇÃO
-
-in development...
 
 - [Linkedin](https://www.linkedin.com/in/ayslan-fernandes-da-silva-5aa617171/)
 - [Twitter](https://twitter.com/Ayslan_FS)
