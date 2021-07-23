@@ -2,13 +2,13 @@
 
 - Potencial para um CRUD de Devs
 
-## Baixar as imagens e subir o container no Docker
+## Baixar as imagens e subir o container no Docker:
 
 ```
     docker-compose up -d --build
 ```
 
-## Para acessar o container do node
+## Para acessar o container do node:
 
 ```
    docker container exec -it potential_crud_dev bash
