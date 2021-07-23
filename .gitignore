@@ -1,10 +1,10 @@
 #dependencies
 node_modules
 
-#dotenvs
+#dotenv
 .env
 env_file
-env_test_file
+.env.test
 
 #tests
 
