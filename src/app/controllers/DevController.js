@@ -14,7 +14,8 @@ class DevController {
             offset: page * limit 
         }) 
 
-        if(!developers || developers.length == 0) {
+
+        if(!developers.rows || developers.rows.length === 0) {
             return res.status(400).json({ message: 'Desenvolvedor não encontrado!' })
         }
 

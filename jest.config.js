@@ -8,7 +8,7 @@ module.exports = {
   // automock: false,
 
   // Stop running tests after `n` failures
-  bail: true,
+  //bail: true,
 
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "C:\\Users\\luksk\\AppData\\Local\\Temp\\jest",
@@ -17,13 +17,13 @@ module.exports = {
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-   collectCoverage: true,
+  //collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: ["src/**", "!src/database/migrations/**", "!src/server.js"],
+  //collectCoverageFrom: ["src/**", "!src/database/migrations/**", "!src/server.js"],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "__tests__/coverage",
+  //coverageDirectory: "__tests__/coverage",
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -31,7 +31,7 @@ module.exports = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  //coverageProvider: "v8",
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [

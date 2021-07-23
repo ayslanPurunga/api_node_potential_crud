@@ -1,5 +1,3 @@
-# **in Development**
-
 # potential_crud_dev
 
 - Potencial para um CRUD de Devs
@@ -24,13 +22,20 @@
 
 ## Documetação da API:
 
+- [DocumentationInPostman](https://documenter.getpostman.com/view/11729513/TzsYM93K)
 
-- [Documentation](https://documenter.getpostman.com/view/11729513/TzsYM93K)
+![](.github/documentation.png)
 
-## TESTES UNITARIOS
+## Testes Unitários:
+#### Como executar:
 
-in development...
+```
+    npm run test
+```
 
+![](.github/unit_test.png)
+
+## Redes Sociais:
 
 - [Linkedin](https://www.linkedin.com/in/ayslan-fernandes-da-silva-5aa617171/)
 - [Twitter](https://twitter.com/Ayslan_FS)

@@ -27,10 +27,7 @@ function ageCalculator(year, month, day) {
 }
 
 function validName(value, msg) {
-    existsOrError(value, 'Por favor, digite um nome válido...')
-   
-    console.log(msg)
-    
+    existsOrError(value, 'Por favor, digite um nome válido...')    
     if(value.length < 3) throw msg
 }
 
