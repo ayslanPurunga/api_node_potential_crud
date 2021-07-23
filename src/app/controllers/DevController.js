@@ -6,14 +6,11 @@ class DevController {
         const limit = 8
         const data = req.query
         let page = data.page - 1 || 0
-
-        
     
         const developers = await Developer.findAndCountAll({
             limit: limit, 
             offset: page * limit 
         }) 
-
 
         if(!developers.rows || developers.rows.length === 0) {
             return res.status(400).json({ message: 'Desenvolvedor não encontrado!' })
@@ -73,7 +70,6 @@ class DevController {
             }
         })
 
-
         if(!developerId || developerId.length == 0) {
             return res.status(400).json({ message: 'Desenvolvedor não encontrado!'})
         }
@@ -85,8 +81,6 @@ class DevController {
             age = age ? (() => {validAge(age); return age})(): developerId.age;
             birthdate = birthdate ? (() => {validBirthDate(birthdate, age); return birthdate})(): developerId.birthdate;
             hobby = hobby ? (() => {validHobby(hobby); return hobby})(): developerId.hobby;
-
-            //console.log(name, sex, age, birthdate,hobby)
 
             const developer = await Developer.update({ name, sex, age, birthdate, hobby }, {
                 where: {
