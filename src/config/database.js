@@ -12,10 +12,10 @@ const sqliteConfig = {
 
 const postgresConfig = {
   username: process.env.DB_USER, //'postgres', //
-  password: process.env.DB_PASS, //'123456', //
+  password: process.env.DB_PASS, //'postgres', //
   host: process.env.DB_HOST, //'127.0.0.1', //
   database: process.env.DB_NAME, //'developers',//
-  dialect: process.env.DB_DIALECT, // "postgres",  || "sqlite",
+  dialect: process.env.DB_DIALECT, // "postgres" //
   operatorsAliases: 0,
   logging: false,
   define: {
